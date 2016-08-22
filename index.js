@@ -9,14 +9,14 @@ app.get('/', function(request, response) {
 	response.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
-app.get('/client/app.js', function(request, response) {
-	console.log('GET', request.url);
-	response.sendFile(path.join(__dirname + '/client/app.js'));
+app.get('/*', function(request, response) {
+	console.log('GET for JS', request.url);
+	response.sendFile(path.join(__dirname + `/client/${request.url}`));
 });
 
 app.get('/*', (req, res) => {
 	console.log(req.method, req.url);
-	res.send(404);
+	res.sendStatus(404);
 });
 
 app.listen(port);

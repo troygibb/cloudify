@@ -1,0 +1,21 @@
+{
+  "name": "mks44deep",
+  "description": "Music player",
+  "main": "index.js",
+  "authors": [
+    "Troy Gibb"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
