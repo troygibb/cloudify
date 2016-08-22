@@ -10,7 +10,7 @@ angular.module('mks44deep.services', [])
 	var searchTracks = function(query, cb) {
 		SC.get('/tracks', {
 		  q: query, 
-		  // limit: 50,
+		  limit: 50,
 		  license: 'cc-by-sa'
 		}).then(function(tracks) {
 		  cb(tracks);
@@ -19,6 +19,6 @@ angular.module('mks44deep.services', [])
 
 	return {
 		getTrack: getTrack,
-		searchTracks: searchTracks
+		searchTracks: searchTracks,
 	}
 })

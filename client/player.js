@@ -3,13 +3,23 @@ angular.module('mks44deep.player', [])
 	var testUrl = 'http://soundcloud.com/forss/flickermood';
 	$scope.searchQuery = '';
 	$scope.players = [];
-	$scope.results = []
+	$scope.results = [];
 	$scope.getTrack = function(url) {
 		Soundcloud.getTrack(url, function(widget) {
 			$(function() {
-				$('#player').append(widget);
-			})
-		})
+				let $widget = $(widget)
+				console.log(soundcloud);
+				$widget.attr('id', 'myPlayer')
+				// console.log(soundcloud)
+				// var x = soundcloud.getPlayer('myPlayer');
+				// console.log('x is ', x);
+				$('#player').append($widget);
+				var w = document.getElementById('myPlayer');
+				document.widget1 = soundcloud.Widget(w);
+				// var x = widget1.getDuration();
+				// console.log(x);
+			});
+		});
 	};
 	$scope.searchTracks = function(query) {
 		Soundcloud.searchTracks(query, function(results) {
@@ -20,8 +30,3 @@ angular.module('mks44deep.player', [])
 	};
 	$scope.getTrack(testUrl);
 }])
-// .directive('playTrack', ['$scope, Soundcloud', function($scope, Soundcloud) {
-// 	return {
-// 		template: $scope.players[0]
-// 	}
-// }])
