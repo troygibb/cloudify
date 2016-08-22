@@ -10,6 +10,7 @@ angular.module('mks44deep', ['mks44deep.services', 'mks44deep.player', 'ngRoute'
 	SC.initialize({
   	client_id: '1c5dbc79108d267f31b122d73159a252'
 	});
+	document.scWidgets = [];
 	console.log("I'm working!");
 	console.log('SC is ', SC);
 	$location.path('/player');
