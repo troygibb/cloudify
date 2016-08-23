@@ -5,8 +5,12 @@
 
     <div class="container searchResults">
     	<div ng-repeat="result in searchResults" ng-click="broadcastUrl(result.uri)" class="spotify row">
-    		<img src={{result.album.images[2].url}}>
-    		<div>{{result.name}}</div>
+    		<img class="col-sm-1" src={{result.album.images[2].url}}>
+    		<div class="col-sm-4 songInfo">
+	    		<h4>{{result.name}}
+	    		<small ng-repeat="artist in result.artists">{{artist.name}}, </small>
+	    		</h4>
+	    	</div>
     	</div>
     </div>
 

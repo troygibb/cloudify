@@ -8,8 +8,15 @@
 	</head>
 	<body>
 
-	<div class="container-fluid">
-		<div class="row"><h1>Cloudify<small> Soundcloud and Spotify all in one place</small></h1></div>
+	<div class="container">
+
+		<div id="banner" ng-controller="AppController" class="row">
+			<h1 class="col-md-8">Cloudify<small> Soundcloud and Spotify all in one place</small></h1>
+			<div class="col-md-4">
+				<img src="http://orig07.deviantart.net/9a32/f/2013/197/b/8/spotify_retina_icon_by_packrobottom-d6dqo1g.png" ng-show="curr === 'spotify'">
+				<img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/SoundCloud_logo.svg/1280px-SoundCloud_logo.svg.png" ng-show="curr === 'soundcloud'">
+			</div>
+		</div>
 
 		<ul id="tabs" class="nav nav-tabs row">
 		  <li class="active"><a data-toggle="tab" href="#/searchSoundcloud">Soundcloud</a></li>
@@ -17,8 +24,8 @@
 		</ul>
 
 		<div class="row">
-			<div ng-view id='searchField' class="col-md-4"></div>
-			<div ng-controller="PlayerController" id="queue" class="col-md-8"></div>
+			<div ng-view id='searchField' class="col-md-6"></div>
+			<div ng-controller="PlayerController" id="queue" class="col-md-6"></div>
 		</div>
 
 	</div>

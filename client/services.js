@@ -15,11 +15,15 @@ angular.module('mks44deep.services', [])
 	SoundCloudMethods.prepForBroadcast = function(url) {
 		this.clickedUrl = url; 
 		this.broadcastUrl();
-	}
+	};
 
 	SoundCloudMethods.broadcastUrl = function() {
 		$rootScope.$broadcast('scUrlClicked');
-	}
+	};
+
+	SoundCloudMethods.broadcastChange = function() {
+		$rootScope.$broadcast('soundcloud');
+	};
 
 	SoundCloudMethods.searchTracks = function(query, cb) {
 		SC.get('/tracks', {
@@ -40,21 +44,26 @@ angular.module('mks44deep.services', [])
 		query = query.split(' ').join('+');
 		$http({
 			method: 'GET',
-			url: `https://api.spotify.com/v1/search?query=${query}&offset=0&limit=20&type=track&limit=50`
+			url: `https://api.spotify.com/v1/search?query=${query}&offset=0&limit=20&type=track&limit=5`
 		}).then(function(result) {
 			cb(result);
 		});
-	}
+	};
+
 	SpotifyMethods.clickedUrl = '';
 
 	SpotifyMethods.prepForBroadcast = function(url) {
 		this.clickedUrl = url; 
 		this.broadcastUrl();
-	}
+	};
 
 	SpotifyMethods.broadcastUrl = function() {
 		$rootScope.$broadcast('spotifyUrlClicked');
-	}
+	};
+
+	SpotifyMethods.broadcastChange = function() {
+		$rootScope.$broadcast('spotify');
+	};
 
 	return SpotifyMethods;
 }]);

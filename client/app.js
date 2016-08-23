@@ -10,6 +10,15 @@ angular.module('mks44deep', ['mks44deep.services', 'mks44deep.player', 'mks44dee
 			controller: 'SearchSpotifyController'
 		})
 }])
+.controller('AppController', ['$scope', function($scope) {
+	$scope.curr = 'spotify';
+	$scope.$on('spotify', function() {
+		$scope.curr = 'spotify';
+	})
+	$scope.$on('soundcloud', function() {
+		$scope.curr = 'soundcloud';
+	});
+}])
 .run(['$location', function($location) {
 	SC.initialize({
   	client_id: '1c5dbc79108d267f31b122d73159a252'

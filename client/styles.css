@@ -1,11 +1,22 @@
-.soundcloud:hover {
-	background: #ff6200;
-	border-radius: 10px;
-};
 
-.spotify:hover {
-	background: #2ebd59;
-	border-radius: 10px;
+
+/*#banner {
+	background-color: #cecdcd;
+	width: 100%;
+}
+
+#tabs{
+	background-color: #cecdcd;
+	width: 100%;
+}*/
+#banner {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#banner>div>img {
+	height: 100px;
+	float: right; 
 }
 
 .searchResults {
@@ -13,9 +24,40 @@
 	height: 100%;
 }
 
+/*.row {
+	margin-bottom: 10px;
+}*/
+
 .search {
 	width: 200px;
 }
+
+button {
+	margin-bottom: 20px;
+}
+
+.searchResults>.row {
+	margin-bottom: 10px;
+	/*width: 580px;*/
+}
+
+/*.searchResults>.spotify:hover img{
+	width: 120px;
+	transition-delay: 0.05s;
+	-webkit-transition-delay: 0.05s;
+}
+*/
+.searchResults>.soundcloud img{
+	height:70px;
+	width:70px;
+}	
+
+/*.searchResults>.soundcloud:hover img{
+	height: 95;
+	width: 95px;
+	transition-delay: 0.05s;
+	-webkit-transition-delay: 0.05s;
+}	*/
 
 .nav-tabs>li.active>a:hover {
 	background-color: #cecdcd;

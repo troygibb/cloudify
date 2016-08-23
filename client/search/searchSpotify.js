@@ -1,5 +1,5 @@
 angular.module('mks44deep.searchSpotify', [])
-.controller('SearchSpotifyController', ['$scope', 'Spotify', function($scope, Spotify) {
+.controller('SearchSpotifyController', ['$scope', 'Spotify', '$rootScope', function($scope, Spotify, $rootScope) {
 	$scope.searchResults = [];
 	$scope.spotifyQuery = '';
 	$scope.searchSpotify = function(query) {
@@ -13,7 +13,9 @@ angular.module('mks44deep.searchSpotify', [])
 	$scope.broadcastUrl = function(url) {
 		Spotify.prepForBroadcast(url);
 	};
-
+	
+	Spotify.broadcastChange();
+	
 	//$scope.searchSpotify('taylor swift');
 }])
 

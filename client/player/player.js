@@ -6,6 +6,7 @@ angular.module('mks44deep.player', [])
 			$(function() {
 				let $widget = $(widget);
 				$widget.height('80px')
+				$widget.width('600px');
 				$widget.attr('class', 'widget');
 				$widget.attr('id', url);
 				$('#queue').append($widget);
@@ -23,15 +24,11 @@ angular.module('mks44deep.player', [])
 		});
 	};
 
-	//<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A33Q6ldVXuJyQmqs8BmAa0k" 
-	//width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
-	//make width 780
-
 	$scope.appendSpotifyTrack = function(url) {
 		console.log()
 		$(function() {
 			let widgetSrc = "https://embed.spotify.com/?uri=" + url; 
-			let widget = (`<iframe src=${widgetSrc} width="780" height="80" frameborder="0" allowtransparency="true"></iframe>`);
+			let widget = (`<iframe src=${widgetSrc} width="600" height="80" frameborder="0" allowtransparency="true"></iframe>`);
 			$('#queue').append(widget);
 		});
 	};
@@ -44,5 +41,4 @@ angular.module('mks44deep.player', [])
 		$scope.appendSpotifyTrack(Spotify.clickedUrl);
 	});
 
-	$scope.getSCTrack(testUrl);
 }])
