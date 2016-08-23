@@ -4,6 +4,7 @@
     <button ng-click="searchSpotify(spotifyQuery)">Submit</button>
 
     <div class="container searchResults">
+    	<img ng-show="loading" src="../assets/spiffygif_46x46.gif">
     	<div ng-repeat="result in searchResults" ng-click="broadcastUrl(result.uri)" class="spotify row">
     		<img class="col-sm-1" src={{result.album.images[2].url}}>
     		<div class="col-sm-4 songInfo">

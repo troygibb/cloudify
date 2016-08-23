@@ -4,7 +4,8 @@
     <button ng-click="searchTracks(soundcloudQuery)">Submit</button>
 
     <div class="container searchResults">
-    	<h5 class="row" ng-show={{!!scResults.length}}>Search results for {{soundcloudQuery}}</h5>
+    	<!-- <h5 class="row" ng-show={{!!scResults.length}}>Search results for {{soundcloudQuery}}</h5> -->
+      <img ng-show="loading" src="../assets/spiffygif_46x46.gif">
 	    <div ng-repeat="result in scResults" ng-click="broadcastUrl(result.permalink_url)" class="row soundcloud">
 	    	<div class="col-md-1">
 	        <img ng-show={{result.artwork_url}} src={{result.artwork_url}}>

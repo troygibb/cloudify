@@ -2,10 +2,13 @@ angular.module('mks44deep.searchSpotify', [])
 .controller('SearchSpotifyController', ['$scope', 'Spotify', '$rootScope', function($scope, Spotify, $rootScope) {
 	$scope.searchResults = [];
 	$scope.spotifyQuery = '';
+	$scope.loading = false; 
 	$scope.searchSpotify = function(query) {
 		console.log('query running ', query);
+		$scope.loading = true; 
 		Spotify.searchSpotify(query, function(result) {
 			$scope.searchResults = result.data.tracks.items;
+			$scope.loading = false; 
 			console.log(result);
 		})
 	};
