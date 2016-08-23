@@ -17,13 +17,8 @@ angular.module('mks44deep.services', [])
 		});
 	};
 
-	var addWidgetAPI = function() {
-		
-	};
-
 	return {
 		getTrack: getTrack,
 		searchTracks: searchTracks,
-		addWidgetAPI: addWidgetAPI
 	}
 })

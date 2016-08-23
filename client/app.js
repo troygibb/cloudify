@@ -1,8 +1,8 @@
-angular.module('mks44deep', ['mks44deep.services', 'mks44deep.player', 'ngRoute'])
+angular.module('mks44deep', ['mks44deep.services', 'mks44deep.player', 'mks44deep.search' 'ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.when('/player', {
-			templateUrl: 'player.html',
+			templateUrl: 'player/player.html',
 			controller: 'PlayerController'
 		})
 }])
