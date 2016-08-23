@@ -1,8 +1,10 @@
-<div class="container">
-	<!-- <div class="row" style='height:100px'>
+
+
+<!-- <div class="container"> -->
+  <!-- <div class="row" style='height:100px'>
     <div id='tab' class="col-md-4">Soundcloud</div>
   </div> -->
-  <ul id="tabs" class="nav nav-tabs">
+  <!-- <ul id="tabs" class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#">Soundcloud</a></li>
   </ul>
 
@@ -13,11 +15,11 @@
           <div id='searchField' class="col-md-4">
             <input ng-model="searchQuery" id="search" type="text">
             <button ng-click="searchTracks(searchQuery)">Submit</button>
-            <div ng-repeat="result in results" ng-click="getTrack(result.permalink_url)" class="row container">
+            <div ng-repeat="result in results" ng-click="getTrack(result.permalink_url)" class="row container"> -->
             <!-- need to account for null artwork -->
-    	        <img src={{result.artwork_url}}>
+              <!-- <img src={{result.artwork_url}}>
               <img ng-show={{!result.artwork_url}} src="assets/noart.jpg" style='height:100px;width:100px'>
-    	        {{result.permalink}}
+              {{result.permalink}}
             </div>
           </div>
           <div id="queue" class="col-md-8">
@@ -27,4 +29,4 @@
     </div>
   </div>
 
-</div>
+</div> -->

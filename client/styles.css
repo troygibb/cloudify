@@ -1,0 +1,27 @@
+.soundcloud:hover {
+	background: #ff6200;
+	border-radius: 10px;
+};
+
+.spotify:hover {
+	background: #2ebd59;
+	border-radius: 10px;
+}
+
+.searchResults {
+	overflow: scroll;
+	height: 100%;
+}
+
+.search {
+	width: 200px;
+}
+
+.nav-tabs>li.active>a:hover {
+	background-color: #cecdcd;
+	color: white; 
+}
+
+#tabs {
+	margin-bottom: 20px;
+}

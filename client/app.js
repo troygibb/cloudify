@@ -1,9 +1,13 @@
-angular.module('mks44deep', ['mks44deep.services', 'mks44deep.player', 'mks44deep.search' 'ngRoute'])
+angular.module('mks44deep', ['mks44deep.services', 'mks44deep.player', 'mks44deep.searchSoundCloud', 'mks44deep.searchSpotify', 'ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider
-		.when('/player', {
-			templateUrl: 'player/player.html',
-			controller: 'PlayerController'
+		.when('/searchSoundcloud', {
+			templateUrl: 'search/searchSoundCloud.html',
+			controller: 'SoundCloudSearchController'
+		})
+		.when('/searchSpotify', {
+			templateUrl: 'search/searchSpotify.html',
+			controller: 'SearchSpotifyController'
 		})
 }])
 .run(['$location', function($location) {
@@ -11,10 +15,20 @@ angular.module('mks44deep', ['mks44deep.services', 'mks44deep.player', 'mks44dee
   	client_id: '1c5dbc79108d267f31b122d73159a252'
 	});
 	document.scWidgets = [];
-	console.log("I'm working!");
-	console.log('SC is ', SC);
-	$location.path('/player');
+	$location.path('/searchSpotify');
 }])
+// .directive('ngEnter', function () {
+//   return function (scope, element, attrs) {
+//     element.bind("keydown keypress", function (event) {
+//       if(event.which === 13) {
+//         scope.$apply(function (){
+//           scope.$eval(attrs.ngEnter);
+//         });
+//         event.preventDefault();
+//       }
+//     });
+//   };
+// });
 
 
 

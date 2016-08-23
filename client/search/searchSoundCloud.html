@@ -1,0 +1,19 @@
+<div class="tab-content">
+  <div class="tab-pane fade in active">
+    <input ng-model="soundcloudQuery" class="search" type="text" placeholder="Search Soundcloud">
+    <button ng-click="searchTracks(soundcloudQuery)" ng-enter="alert('hellow!)">Submit</button>
+
+    <div class="container searchResults">
+	    <div ng-repeat="result in scResults" ng-click="broadcastUrl(result.permalink_url)" class="row soundcloud">
+	    	<div class="col-md-1">
+	        <img src={{result.artwork_url}}>
+	        <img ng-show={{!result.artwork_url}} src="assets/noart.jpg" style='height:100px;width:100px'>
+	      </div>
+        <div class="col-md-4">{{result.title}}
+        	<footer class="blockquote-footer"><cite title="Source Title">{{result.user.username}}</cite></footer>
+        </div>
+	    </div>
+	  </div>
+
+  </div>
+</div>

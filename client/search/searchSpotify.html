@@ -1,0 +1,14 @@
+<div class="tab-content">
+  <div class="tab-pane fade in active">
+    <input ng-model="spotifyQuery" class="search" type="text" placeholder="Search Spotify">
+    <button ng-click="searchSpotify(spotifyQuery)">Submit</button>
+
+    <div class="container searchResults">
+    	<div ng-repeat="result in searchResults" ng-click="broadcastUrl(result.uri)" class="spotify row">
+    		<img src={{result.album.images[2].url}}>
+    		<div>{{result.name}}</div>
+    	</div>
+    </div>
+
+ </div>
+</div>
