@@ -14,6 +14,9 @@ angular.module('mks44deep', ['mks44deep.services', 'mks44deep.player', 'mks44dee
 	$scope.curr = 'spotify';
 	$scope.$on('spotify', function() {
 		$scope.curr = 'spotify';
+		// $(function() {
+		// 	$('#banner')
+		// })
 	})
 	$scope.$on('soundcloud', function() {
 		$scope.curr = 'soundcloud';

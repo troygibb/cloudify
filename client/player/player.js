@@ -1,7 +1,9 @@
 angular.module('mks44deep.player', [])
 .controller('PlayerController', ['$scope', 'Soundcloud', 'Spotify', function($scope, Soundcloud, Spotify) {
 	var testUrl = 'http://soundcloud.com/forss/flickermood';
+	$scope.loading = false; 
 	$scope.getSCTrack = function(url) {
+		$scope.loading = true; 
 		Soundcloud.getTrack(url, function(widget) {
 			$(function() {
 				let $widget = $(widget);
@@ -19,13 +21,14 @@ angular.module('mks44deep.player', [])
 					//var currElement = $('#'+url).remove();
 					document.scWidgets[index + 1].play();
 				});
-
+				$scope.loading = false; 
+				$scope.$apply();
 			});
+
 		});
 	};
 
 	$scope.appendSpotifyTrack = function(url) {
-		console.log()
 		$(function() {
 			let widgetSrc = "https://embed.spotify.com/?uri=" + url; 
 			let widget = (`<iframe src=${widgetSrc} width="600" height="80" frameborder="0" allowtransparency="true"></iframe>`);

@@ -9,6 +9,7 @@
 	background-color: #cecdcd;
 	width: 100%;
 }*/
+
 #banner {
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -30,6 +31,18 @@
 
 .search {
 	width: 200px;
+}
+
+#spotifyQuery:focus {
+	border-color: rgba(128,212,63,0.8);
+	box-shadow: 0 1px 1px rgba(128,212,63,0.075) inset, 0 0 8px rgba(128,212,63,0.6);
+  outline: 0 none;
+}
+
+#soundcloudQuery:focus {
+	border-color: rgba(248,89,15,0.8);
+	box-shadow: 0 1px 1px rgba(248,89,15,0.075) inset, 0 0 8px rgba(248,89,15,0.6);
+  outline: 0 none;
 }
 
 button {

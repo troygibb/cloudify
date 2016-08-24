@@ -25,7 +25,9 @@
 
 		<div class="row">
 			<div ng-view id='searchField' class="col-md-6"></div>
-			<div ng-controller="PlayerController" id="queue" class="col-md-6"></div>
+			<div ng-controller="PlayerController" id="queue" class="col-md-6">
+				<img class="loading" ng-show="loading" src="assets/spiffygif_46x46.gif">
+			</div>
 		</div>
 
 	</div>
